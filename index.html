@@ -3,10 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kjy600715-dot</title>
+  <title>kjy600715-dot 실습 자료</title>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --card: #ffffff;
+      --border: #e3e4e8;
+      --text: #1f2328;
+      --muted: #6b7079;
+      --accent: #3b6ef5;
+      --chip: #eef0f3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14161a;
+        --card: #1d2026;
+        --border: #2d3139;
+        --text: #e6e8eb;
+        --muted: #9aa0a8;
+        --accent: #6b93ff;
+        --chip: #2a2e35;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 48px 16px; }
+    header h1 { margin: 0 0 4px; font-size: 28px; }
+    header p { margin: 0 0 32px; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .num { font-size: 13px; font-weight: 600; color: var(--accent); }
+    .card h2 { margin: 0; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+    .status {
+      align-self: flex-start;
+      margin-top: 8px;
+      padding: 3px 10px;
+      font-size: 12px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: var(--muted);
+    }
+    /* 링크 준비 전: 클릭 비활성 */
+    .card.disabled { cursor: not-allowed; opacity: 0.85; }
+  </style>
 </head>
 <body>
-  <h1>안녕하세요!</h1>
-  <p>kjy600715-dot의 GitHub Pages입니다.</p>
+  <div class="wrap">
+    <header>
+      <h1>실습 자료 모음</h1>
+      <p>kjy600715-dot의 실습 프로젝트를 모아두는 곳입니다.</p>
+    </header>
+
+    <main class="grid">
+      <!-- 링크가 준비되면 href="#"을 실제 주소로 바꾸고 class의 disabled와 aria-disabled를 지우세요 -->
+      <a class="card disabled" href="#" aria-disabled="true" onclick="return false;">
+        <span class="num">01</span>
+        <h2>할일 목록 리스트</h2>
+        <p>할 일을 추가하고 완료 표시하는 To-Do 앱</p>
+        <span class="status">준비 중</span>
+      </a>
+      <a class="card disabled" href="#" aria-disabled="true" onclick="return false;">
+        <span class="num">02</span>
+        <h2>클로드 활용 스네이크 게임</h2>
+        <p>Claude와 함께 만든 스네이크 게임</p>
+        <span class="status">준비 중</span>
+      </a>
+      <a class="card disabled" href="#" aria-disabled="true" onclick="return false;">
+        <span class="num">03</span>
+        <h2>개인 프로파일</h2>
+        <p>나를 소개하는 프로필 페이지</p>
+        <span class="status">준비 중</span>
+      </a>
+      <a class="card disabled" href="#" aria-disabled="true" onclick="return false;">
+        <span class="num">04</span>
+        <h2>주식 뉴스</h2>
+        <p>관심 종목의 주식 뉴스 모아보기</p>
+        <span class="status">준비 중</span>
+      </a>
+      <a class="card disabled" href="#" aria-disabled="true" onclick="return false;">
+        <span class="num">05</span>
+        <h2>아이패드 업그레이드 동향</h2>
+        <p>아이패드 신제품과 업그레이드 소식 정리</p>
+        <span class="status">준비 중</span>
+      </a>
+      <a class="card disabled" href="#" aria-disabled="true" onclick="return false;">
+        <span class="num">06</span>
+        <h2>새 프로젝트</h2>
+        <p>다음 실습 프로젝트가 들어갈 자리</p>
+        <span class="status">준비 중</span>
+      </a>
+    </main>
+  </div>
 </body>
 </html>
